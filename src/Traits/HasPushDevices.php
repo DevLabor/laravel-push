@@ -12,7 +12,7 @@ trait HasPushDevices {
 	{
 		static::deleting(function ($model)
 		{
-			$model->pushDevices()->each->delete();
+			$model->pushDevices()->get()->each->delete();
 		});
 	}
 	
@@ -31,8 +31,8 @@ trait HasPushDevices {
 	 * @param  \Illuminate\Notifications\Notification  $notification
 	 * @return string
 	 */
-	public function routeNotificationForPush($notification)
+	public function routeNotificationForFcm($notification)
 	{
-		return optional($this->pushDevices->first())->device_token;
+		return optional($this->pushDevices->latest()->first())->device_token;
 	}
 }
