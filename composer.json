@@ -5,7 +5,7 @@
 		"devlabor",
 		"push",
 		"fcm",
-		"apn"
+		"apn",
 		"laravel"
 	],
 	"homepage": "https://github.com/devlabor/laravel-push",
