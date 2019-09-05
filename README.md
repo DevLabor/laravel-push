@@ -15,9 +15,9 @@ php artisan vendor:publish --tag=push
 
 This is the contents of the published config file:
 ```php
-return [
-	
-];
+    'fcm' => [
+	    'key' => env('FCM_KEY')
+    ]
 ```
 
 ### Testing

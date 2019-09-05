@@ -22,7 +22,7 @@ trait HasPushDevices {
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
 	 */
 	public function pushDevices() {
-		return $this->hasMany(PushDevice::class);
+		return $this->hasMany(PushDevice::class)->latest();
 	}
 
 	/**
@@ -33,6 +33,6 @@ trait HasPushDevices {
 	 */
 	public function routeNotificationForFcm($notification)
 	{
-		return optional($this->pushDevices->latest()->first())->device_token;
+		return optional($this->pushDevices->first())->device_token;
 	}
 }
