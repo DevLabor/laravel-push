@@ -18,8 +18,7 @@ class CreateProductsTable extends Migration
 	        $table->bigInteger('user_id')->nullable();
             $table->string('device_token');
             $table->string('push_service');
-            
-            // @todo foreign key
+            $table->timestamps();
         });
     }
 

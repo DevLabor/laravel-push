@@ -11,7 +11,8 @@
 	"homepage": "https://github.com/devlabor/laravel-push",
 	"license": "MIT",
     "require": {
-        "laravel/framework": "^5.8"
+        "laravel/framework": "^5.8",
+		"benwilkins/laravel-fcm-notification": "dev-master"
     },
     "authors": [
         {
