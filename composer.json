@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DevLabor\\Push\\pushServiceProvider"
+                "DevLabor\\Push\\PushServiceProvider"
             ]
         }
     },
